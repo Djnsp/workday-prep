@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0d2d5e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Workday Prep">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<title>Workday Certification Prep</title>
+<style>
+:root{--navy:#0d2d5e;--navy2:#12407f;--blue:#0875e1;--orange:#f38b00;--green:#2f9e44;--purple:#8e44ad;
+--ink:#333;--ink2:#5e6a75;--soap:#f6f7f8;--line:#dfe3e8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--soap);color:var(--ink);min-height:100vh}
+header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:calc(26px + env(safe-area-inset-top,0px)) 24px 26px;text-align:center}
+header .logo{font-weight:800;font-size:24px}
+header .logo span{color:var(--orange)}
+header p{opacity:.85;font-size:14px;margin-top:4px}
+.wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+a.app{display:block;text-decoration:none;color:inherit;background:#fff;border:2px solid var(--line);border-radius:16px;padding:22px;margin-bottom:16px;transition:.15s;box-shadow:0 1px 3px rgba(13,45,94,.06)}
+a.app:hover{transform:translateY(-2px);border-color:var(--blue)}
+.tag{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.4px;border-radius:20px;padding:3px 11px;margin-bottom:8px}
+h2{font-size:19px;color:var(--navy);margin-bottom:5px}
+.muted{color:var(--ink2);font-size:13.5px;line-height:1.5}
+.foot{text-align:center;font-size:12px;color:var(--ink2);margin-top:24px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">workday<span>.</span> certification prep</div>
+  <p>Personal study apps — Learning mode, timed exam simulations, and guides</p>
+</header>
+<div class="wrap">
+  <a class="app" href="hcm-core.html">
+    <span class="tag" style="background:#e7f1fc;color:var(--blue)">HCM CORE</span>
+    <h2>Workday Pro HCM Core</h2>
+    <p class="muted">260 questions across Staffing, Organizations, Business Processes, Reporting, and Security — plus a full study guide and 20q/50q exam simulations.</p>
+  </a>
+  <a class="app" href="extend.html">
+    <span class="tag" style="background:#e9f7ec;color:var(--green)">EXTEND</span>
+    <h2>Workday Extend</h2>
+    <p class="muted">Extend certification prep — PMD, AMD, SMD, Orchestrate, and app development concepts with Learning and Exam modes.</p>
+  </a>
+  <a class="app" href="integrations.html">
+    <span class="tag" style="background:#f3e8fa;color:var(--purple)">INTEGRATIONS</span>
+    <h2>Workday Pro Integrations</h2>
+    <p class="muted">Practice exam question bank covering Core Connectors, EIB, Studio, document transformation, and integration security.</p>
+  </a>
+  <div class="foot">Original practice content for personal study — not official Workday material.</div>
+</div>
+<script>
+if("serviceWorker" in navigator && location.protocol.indexOf("http")===0){
+  navigator.serviceWorker.register("./sw.js").catch(()=>{});
+}
+</script>
+</body>
+</html>
